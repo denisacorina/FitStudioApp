@@ -1,0 +1,196 @@
+
+
+  #registerBtn {
+    width: 130%;
+    margin-left: -33px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+  
+    border-radius: 30px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  #registerBtn:hover {
+    background-position: 100% 0;
+   -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    transform: translateY(-3px);
+  }
+  
+  #registerBtn:focus {
+    outline: none;
+  }
+  
+  #registerBtn {
+    background-image: linear-gradient(to right, #1a1b1a, #3a5a4d, #1a1b1a, #3a5a4d);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+  }
+  
+.text-center{
+    margin-top: 15px;
+}
+  
+  .registerText{
+    color: rgb(36, 36, 36);
+    font-size: 36px;
+    font-weight: 700;
+      margin-bottom: 20px;
+      margin-top: 50px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #loginForm{
+      position: relative;
+      padding-left: -4%;
+      padding-right: 45%;
+      width: 600px;
+      display: inline-block;
+      background-color: #2e2e2e;
+    background-image: url("../../../assets/img/workout.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+   .logo{
+      width: 120px;
+      margin-bottom: -20px;
+      margin-top: -40px;
+
+  
+   }
+  
+  .split {
+      height: 100%;
+      width: 55%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    /* Control the left side */
+    .left {
+      left: 0;
+    }
+  
+ 
+    
+    /* Control the right side */
+    .right {
+      right: 0;
+      background-color: #3a523e;
+      background-image: url("../../../assets/img/gym.png");
+      box-shadow: 0px 6px 15px 0px rgba(8, 8, 8, 0.57);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    /* If you want the content centered horizontally and vertically */
+    .centered {
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      text-align: center;
+    }
+
+    div.border{
+        
+      background-color: rgba(14, 14, 14, 0.096);
+      border-color:  rgb(65, 88, 81)!important;
+      border-radius: 30px;
+      border-style: solid;
+      border-width: medium;
+    
+      width: 150%;
+      margin-left: -45px;
+    }
+  
+    div.border:hover{
+      background-color: rgba(66, 66, 66, 0.226);
+    }
+  
+    a{
+      color:  #292929;
+      text-decoration: none;
+   
+    }
+    a:hover{
+         color:  #3b5040;
+      text-decoration: none;
+    }
+    a.googleBtn{
+      color: #d8d8d8;
+      font-weight: 700!important;
+     
+    }
+
+    .googleImg{
+      width: 50px;
+      filter: drop-shadow(0 0 0.15rem rgb(91, 91, 91));
+    }
+  
+  form{
+    font-size: 14px!important;
+  
+  }
+
+  
+.form-control {
+    width: 150%;
+    margin-left: -50px;
+}
+  
+  .form-outline{
+    margin-top: 15px;
+  }
+
+  .heading{
+    font-size: 36px!important;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .lorem{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 22px;
+  }
+  
+  
+  .carousel-inner{
+    width: 600px;
+  
+  }
+
+  .mat-icon{
+    margin-top: 52px;
+    margin-left: 140px;
+    width: 100px!important;
+    height: 100px!important;
+    font-size: 70px;
+  }
+
+
+  em{
+    margin-top: 15px;
+    margin-left: 10px;
+    padding: 1px 10px 1px 10px;
+    background-color: #f2dede;
+    color: #a94442;
+  }

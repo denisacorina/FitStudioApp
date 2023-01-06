@@ -11,6 +11,11 @@ namespace FitStudioAPI
         public FitStudioContext(DbContextOptions options) : base(options)
         {
         }
+
+        public FitStudioContext()
+        {
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

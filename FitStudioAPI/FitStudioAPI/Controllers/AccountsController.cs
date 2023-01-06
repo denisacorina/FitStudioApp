@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using FitStudioAPI.JwtFeatures;
 using FitStudioAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace FitStudioAPI.Controllers
 {
@@ -12,10 +14,12 @@ namespace FitStudioAPI.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly IMapper _mapper;
-        public AccountsController(UserManager<User> userManager, IMapper mapper)
+        private readonly JwtHandler _jwtHandler;
+        public AccountsController(UserManager<User> userManager, IMapper mapper, JwtHandler jwtHandler)
         {
             _userManager = userManager;
             _mapper = mapper;
+            _jwtHandler = jwtHandler;
         }
 
         [HttpPost("Registration")]
@@ -45,5 +49,21 @@ namespace FitStudioAPI.Controllers
             }
         }
 
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] AuthenticationDTO authentication)
+        {
+            var user = await _userManager.FindByNameAsync(authentication.Email);
+
+            if (user == null || !await _userManager.CheckPasswordAsync(user, authentication.Password))
+                return Unauthorized(new AuthResponseDto { ErrorMessage = "Invalid Authentication"});
+
+            var signingCredentials = _jwtHandler.GetSigningCredentials();
+            var claims = _jwtHandler.GetClaims(user);
+            var tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
+            var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+
+            return Ok(new AuthResponseDto { IsAuthSuccessful = true, Token = token });
         }
+
+    }
 }

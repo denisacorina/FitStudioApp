@@ -10,6 +10,7 @@ namespace FitStudioAPI.Helpers
             CreateMap<RegisterUserDTO, User>()
                 .ForMember(u => u.UserName, opt => opt.MapFrom(x => x.Email))
                 .ReverseMap();
+            CreateMap<AuthenticationDTO, User>().ReverseMap();
         }
 
     }

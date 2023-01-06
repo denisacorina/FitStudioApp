@@ -4,26 +4,29 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { RegistrationUserDTO } from 'src/app/interfaces/user/registrationUserDTO.model';
 import { AuthenticationService } from 'src/app/shared/services/authentication.service';
 import { Router, UrlSerializer } from '@angular/router';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 
 
 export class RegisterComponent {
  
   registerForm!: FormGroup;
+  errorMessage!: any;
 
   constructor(private authService: AuthenticationService, private router : Router) {}
 
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
+      firstName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required])
+      password: new FormControl('', [Validators.required, Validators.minLength(8)])
     });
   }
 
@@ -47,7 +50,17 @@ public registerUser = (registerFormValue: any) => {
     next: (_) =>{ console.log("Successful registration");
     this.router.navigateByUrl("login");
   },
-    error: (err: HttpErrorResponse) => console.log(err.error.errors)
+    error: (err: HttpErrorResponse) => { 
+      console.log(err.error.errors);
+      if (err.status == 400 && err.message.includes("password"))
+      {
+        this.errorMessage = "Password must be at least 8 characters";
+      }
+      if (err.status == 400 && err.message.includes("Email"))
+      {
+        this.errorMessage = "Please provide a valid email";
+      }
+    }
   })
 }
 }

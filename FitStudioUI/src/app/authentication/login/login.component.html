@@ -1,1 +1,90 @@
-<p>login works!</p>
+<div class="split left" id="loginForm">
+    <a routerLink="/home"><mat-icon class="backIcon">keyboard_arrow_left</mat-icon></a>
+    <div class="centered">
+<form style="box-sizing: unset!important;" autocomplete="off">
+    <img src="../../../assets/img/fitStudioGreen.png" class="logo"> 
+<h2 class="registerText">Login</h2>
+
+
+
+<div *ngIf="showError" class="alert alert-danger" role="alert">
+    The email or password is incorrect
+</div>
+  
+
+
+      <form [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="loginUser(loginForm.value)">
+        
+
+
+        <div class="form-outline">
+            <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email" />
+        
+
+   
+              <div>
+                  <em *ngIf="validateControl('email') && hasError('email', 'required')">Email is required</em>
+              </div>
+          </div>
+
+          <div class="form-outline">
+            <input type="password" id="password" formControlName="password" class="form-control" placeholder="Password" minlength="8"/>
+              <div>
+                  <em *ngIf="validateControl('password') && hasError('password', 'required')">Password is required</em>
+              </div>
+          </div>
+          <br>
+          <div class="row ">
+            <!-- Submit button -->
+            <button value="Submit" class="btn btn-block" [disabled]="!loginForm.valid" id="registerBtn">Login</button>
+          </div>
+      </form>
+
+      <div class="text-center">
+        <p style="font-size: 14px!important;">Don't have an account? <a routerLink="/register"><b>Register</b></a></p>
+      <h5>OR</h5>
+      </div>
+<div class="col s12 m6 offset-m3 center-align border">
+
+      <a href="#" role="button" class="googleBtn">
+        <img src="../../../assets/img/google.png" class="googleImg">Login in with Google
+      </a>
+</div>
+
+  </form>
+</div>
+</div>
+
+<div class="split right ">
+    <div class="centered">
+ 
+       
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+          
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="../../../assets/img/sport.png" alt="" style="width:600px; height: 350px;">
+                  <p class="heading">Book your personal trainer <br> session now</p>
+                  <p class="lorem" style="color: rgb(226, 226, 226)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt explicabo necessitatibus laboriosam tempore nu</p>
+              
+                </div>
+          
+                <div class="item">
+                  <img src="../../../assets/img/booking.png" alt="" style="width:600px; height: 350px;">
+                  <p class="heading">Buy your membership and  <br> book fitness classes easy</p>
+                  <p class="lorem" style="color: rgb(226, 226, 226)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt explicabo necessitatibus laboriosam tempore nu</p>
+              
+                </div>
+               
+            </div>
+          
+          </div>
+        
+        
+    
+</div> 
+</div>
+
+ 
+
