@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   errorMessage: string = '';
   showError!: boolean;
+  loggedIn = false;
   constructor(private authService: AuthenticationService, private router: Router, private route: ActivatedRoute) { }
   
   ngOnInit(): void {
@@ -40,8 +41,6 @@ export class LoginComponent implements OnInit {
       password: login.password,
    
     }
-
-
     this.authService.login(user)
     .subscribe({
       next: (res:AuthResponseDto) => {
@@ -49,6 +48,7 @@ export class LoginComponent implements OnInit {
        this.authService.sendAuthStateChangeNotification(res.isAuthSuccessful);
        sessionStorage.setItem('loggedUser', user.email);
        this.router.navigateByUrl("dashboard");
+       this.loggedIn = true;
     },
     error: (err: HttpErrorResponse) => {
       this.errorMessage = err.message;

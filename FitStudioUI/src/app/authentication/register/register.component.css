@@ -1,4 +1,8 @@
 
+  .row {
+    width: 150%;
+    margin-left: -15px;
+  }
 
   #registerBtn {
     width: 130%;
@@ -43,7 +47,7 @@
 }
   
   .registerText{
-    color: rgb(36, 36, 36);
+    color: rgb(255, 255, 255);
     font-size: 36px;
     font-weight: 700;
       margin-bottom: 20px;
@@ -51,22 +55,23 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  #loginForm{
+  #registerForm{
       position: relative;
       padding-left: -4%;
       padding-right: 45%;
       width: 600px;
       display: inline-block;
       background-color: #2e2e2e;
-    background-image: url("../../../assets/img/workout.jpg");
+    background-image: url("../../../assets/img/workout.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-   .logo{
-      width: 120px;
+   .logoRegister{
+    height: 160px;
+      width: 160px;
       margin-bottom: -20px;
-      margin-top: -40px;
+      margin-top: -80px;
 
   
    }
@@ -77,13 +82,13 @@
       position: fixed;
       z-index: 1;
       top: 0;
-      overflow-x: hidden;
       padding-top: 20px;
     }
     
     /* Control the left side */
     .left {
       left: 0;
+      box-shadow: 0px 6px 15px 0px rgba(8, 8, 8, 0.57);
     }
   
  
@@ -93,7 +98,7 @@
       right: 0;
       background-color: #3a523e;
       background-image: url("../../../assets/img/gym.png");
-      box-shadow: 0px 6px 15px 0px rgba(8, 8, 8, 0.57);
+      box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.57);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -120,16 +125,16 @@
     }
   
     div.border:hover{
-      background-color: rgba(66, 66, 66, 0.226);
+      background-color: rgba(66, 66, 66, 0.46);
     }
   
     a{
-      color:  #292929;
+      color:  #cbc9c9;
       text-decoration: none;
    
     }
     a:hover{
-         color:  #3b5040;
+         color:  #324637;
       text-decoration: none;
     }
     a.googleBtn{

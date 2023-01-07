@@ -9,9 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './authentication/login/login.component';
 import { NotFoundComponent } from './notFound/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './basic-pages/home/home.component';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { DashboardComponent } from './authorizedPages/dashboard/dashboard.component';
+import { FooterComponent } from './basic-pages/footer/footer.component';
 
 
 
@@ -29,6 +30,7 @@ export function tokenGetter()
     NotFoundComponent,
     HomeComponent,
     DashboardComponent,
+    FooterComponent,
     
   ],
   imports: [

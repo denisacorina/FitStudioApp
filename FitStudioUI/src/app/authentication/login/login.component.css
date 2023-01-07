@@ -1,8 +1,12 @@
 
+  .row {
+    width: 150%;
+    margin-left: -50px;
+  }
 
-  #registerBtn {
-    width: 130%;
-    margin-left: -33px;
+  #loginBtn {
+   
+    /* margin-left: -33px; */
     font-weight: 500;
     font-size: 14px;
     color: #fff;
@@ -12,7 +16,6 @@
     text-align: center;
     border: none;
     background-size: 300% 100%;
-  
     border-radius: 30px;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -20,7 +23,7 @@
     transition: all .4s ease-in-out;
   }
   
-  #registerBtn:hover {
+  #loginBtn:hover {
     background-position: 100% 0;
    -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -29,11 +32,11 @@
     transform: translateY(-3px);
   }
   
-  #registerBtn:focus {
+  #loginBtn:focus {
     outline: none;
   }
   
-  #registerBtn {
+  #loginBtn {
     background-image: linear-gradient(to right, #1a1b1a, #3a5a4d, #1a1b1a, #3a5a4d);
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
   }
@@ -41,9 +44,9 @@
 .text-center{
     margin-top: 15px;
 }
-  
+
   .registerText{
-    color: rgb(36, 36, 36);
+    color: rgb(255, 255, 255);
     font-size: 36px;
     font-weight: 700;
       margin-bottom: 20px;
@@ -58,17 +61,16 @@
       width: 600px;
       display: inline-block;
       background-color: #2e2e2e;
-    background-image: url("../../../assets/img/workout.jpg");
+      background-image: url("../../../assets/img/workout.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-   .logo{
-      width: 120px;
+   .logoLogin{
+      height: 160px;
+      width: 160px;
       margin-bottom: -20px;
-      margin-top: -40px;
-
-  
+      margin-top: -80px;
    }
   
   .split {
@@ -77,13 +79,13 @@
       position: fixed;
       z-index: 1;
       top: 0;
-      overflow-x: hidden;
       padding-top: 20px;
     }
     
     /* Control the left side */
     .left {
       left: 0;
+      box-shadow: 0px 6px 15px 0px rgba(8, 8, 8, 0.57);
     }
   
  
@@ -98,7 +100,10 @@
       background-size: cover;
     }
     
-    /* If you want the content centered horizontally and vertically */
+    .center {
+      position: absolute!important;
+    }
+  
     .centered {
       position: absolute;
       top: 47%;
@@ -110,13 +115,13 @@
     div.border{
         
       background-color: rgba(14, 14, 14, 0.096);
-      border-color:  rgb(65, 88, 81)!important;
+      border-color:  rgb(255, 255, 255)!important;
       border-radius: 30px;
       border-style: solid;
       border-width: medium;
     
-      width: 150%;
-      margin-left: -45px;
+      width: 150%!important;
+      margin-left: -48px;
     }
   
     div.border:hover{
@@ -124,7 +129,7 @@
     }
   
     a{
-      color:  #292929;
+      color:   #cbc9c9;
       text-decoration: none;
    
     }
