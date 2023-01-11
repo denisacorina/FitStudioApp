@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZfZqEpHFMYJ3Fr2U0I07sNoX1cCQx8jZrL8WkqMNAXQK1/bqYdHrGenVlrIw6TT/qrt5iSyBixu6rS+9IX0qOA==",
+  "dgSpecHash": "eoCpG0xhzMRGCCb8P/UtH1Tkp1qtB5csotbAayKPyPCy8tskuwlXSuE9JfeMaoI6/lvteTIzmd/acbF7NFxzaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DENI\\Desktop\\FitStudio\\FitStudioAPI\\FitStudioAPI\\FitStudioAPI.csproj",
+  "projectFilePath": "C:\\Users\\DENI\\Desktop\\FitStudio\\FitStudioAPI\\Fitstudioapi\\FitStudioAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DENI\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\DENI\\.nuget\\packages\\automapper.ef6\\2.1.1\\automapper.ef6.2.1.1.nupkg.sha512",

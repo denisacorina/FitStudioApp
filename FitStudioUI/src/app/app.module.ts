@@ -13,6 +13,9 @@ import { HomeComponent } from './basic-pages/home/home.component';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { DashboardComponent } from './authorizedPages/dashboard/dashboard.component';
 import { FooterComponent } from './basic-pages/footer/footer.component';
+import { PricesComponent } from './prices/prices.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ProgramComponent } from './program/program.component';
 
 
 
@@ -31,6 +34,9 @@ export function tokenGetter()
     HomeComponent,
     DashboardComponent,
     FooterComponent,
+    PricesComponent,
+    NavBarComponent,
+    ProgramComponent,
     
   ],
   imports: [

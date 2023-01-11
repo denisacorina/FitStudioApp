@@ -1,0 +1,92 @@
+.container-prices {
+    height: 1000px;
+    background-color: rgb(26, 26, 26);
+    text-align: center;
+  }
+
+ 
+
+
+
+.card  {
+    display: inline-flex;
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    background-color: rgb(35, 35, 35);    
+    color: white;
+    border-radius: 10px;
+}
+
+.card:hover {
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    background-color: rgb(30, 52, 35);  
+    transition-duration: 1s;
+    border-color: rgb(37, 65, 43);
+    border-width: 3px;
+    box-shadow: 0px 6px 15px 0px rgba(8, 8, 8, 0.57);
+}
+
+.cards {
+margin-top: 3%;
+margin-bottom: -3%;
+}
+
+
+.section-title-text {
+    color: rgba(255, 255, 255, 0.329);
+    font-size: 100px;
+    display: inline-block;
+    margin-top: -40px;
+    font-weight: 800;
+}
+
+.section-big-text {
+    font-weight: 800;
+    line-height: 28px;
+    padding-top: 10%;
+    color: white;
+    width: 100%;
+    font-size:40px;
+   
+
+}
+
+.membership-name {
+    padding-top: 50px;
+}
+
+.membership-descript {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.popular {
+    margin-top: 20px;
+    margin-bottom: -30px;
+    background-color: rgb(41, 64, 41);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.header-button {
+    position: relative;
+    display: inline;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.055);
+    border-color: white;
+    color: white;
+    font-size: 18px;
+  }
+
+  .header-button:hover {
+    position: relative;
+    display: inline;
+    background-color: rgba(42, 78, 69, 0.164);
+    color:rgb(254, 255, 255);
+    border-color: rgb(42, 78, 69);
+    font-size: 18px;
+  }

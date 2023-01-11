@@ -1,0 +1,53 @@
+.navbar {
+    border-radius: 0;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.284);
+} 
+
+.nav-link {
+    color: white;
+    text-decoration: none!important; 
+    margin-right: 20px;
+}
+
+.nav-link:hover {
+    color: rgb(199, 199, 199);
+    text-decoration:underline!important;
+    text-decoration-thickness: 2px!important;
+    text-decoration-color: rgb(31, 78, 55)!important;
+}
+
+.btn {
+    background-color: rgb(247, 247, 247);
+    margin-right: 20px;
+    font-size: 16px;
+    color: rgb(25, 48, 32);
+}
+
+.btn:hover {
+    background-color: rgb(20, 83, 59);
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -50px !important; 
+    margin-top: 50px;
+    display: block;
+}
+
+.inlineLeft, .inlineRight {
+    position: absolute;
+    display: inline;
+}
+
+.inlineRight {
+    right: 0;
+    margin-right: 70px;
+}
+
+.inlineLeft {
+    margin-left: 70px;
+}
