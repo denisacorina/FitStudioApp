@@ -7,6 +7,7 @@ import { AuthenticationDTO } from 'src/app/interfaces/user/authenticateUser.mode
 import { AuthResponseDto } from 'src/app/interfaces/response/authResponseDTO.model';
 import { RegistrationUserDTO } from 'src/app/interfaces/user/registrationUserDTO.model';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,6 +18,8 @@ export class LoginComponent implements OnInit {
   errorMessage: string = '';
   showError!: boolean;
   loggedIn = false;
+  jwtHelper: any;
+  userr!: any;
   constructor(private authService: AuthenticationService, private router: Router, private route: ActivatedRoute) { }
   
   ngOnInit(): void {
@@ -41,6 +44,8 @@ export class LoginComponent implements OnInit {
       password: login.password,
    
     }
+
+
     this.authService.login(user)
     .subscribe({
       next: (res:AuthResponseDto) => {
@@ -49,6 +54,7 @@ export class LoginComponent implements OnInit {
        sessionStorage.setItem('loggedUser', user.email);
        this.router.navigateByUrl("dashboard");
        this.loggedIn = true;
+
     },
     error: (err: HttpErrorResponse) => {
       this.errorMessage = err.message;
@@ -56,9 +62,4 @@ export class LoginComponent implements OnInit {
     }})
   }
 
-  handleResponse(data:any){
-    localStorage.setItem("token", data.token);
-    sessionStorage.setItem('loggedUser', data.firstName);
-    this.router.navigateByUrl('dashboard');
-  }
 }

@@ -53,7 +53,6 @@
 
   .container-team {
     height: 800px;
-    background-color: rgb(26, 26, 26);
     text-align: center;
   }
 
@@ -65,19 +64,16 @@
 
   .container-advantages {
     height: 800px;
-    background-color: rgb(26, 26, 26);
     text-align: center;
   }
 
   .container-gallery {
     height: 800px;
-    background-color: rgb(26, 26, 26);
     text-align: center;
   }
 
   .container-map {
     height: 450px;
-    background-color: rgb(26, 26, 26);
     text-align: center;
   }
 

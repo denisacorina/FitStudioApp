@@ -6,13 +6,14 @@ import { AuthResponseDto } from 'src/app/interfaces/response/authResponseDTO.mod
 import { Observable, Subject } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { TitleStrategy } from '@angular/router';
+import { User } from 'src/app/interfaces/user/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  baseUrl = "https://localhost:7025/api/Accounts/";
+  baseUrl = "https://localhost:7267/api/Auth/";
 
 
   private authChangeSub = new Subject<boolean>()
@@ -23,13 +24,14 @@ export class AuthenticationService {
 
   register(model : RegistrationUserDTO)
   {
-    return this.http.post(`${this.baseUrl}Registration`, model);
+    return this.http.post(`${this.baseUrl}register`, model);
   }
 
   login(model: AuthenticationDTO)
   {
-    return this.http.post<AuthResponseDto>(`${this.baseUrl}Login`, model);
+    return this.http.post<AuthResponseDto>(`${this.baseUrl}login`, model);
   }
+
 
   logout = () => {
     localStorage.removeItem("token");

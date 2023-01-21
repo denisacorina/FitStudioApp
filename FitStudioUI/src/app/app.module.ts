@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './authentication/login/login.component';
-import { NotFoundComponent } from './notFound/not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './basic-pages/home/home.component';
 import { MaterialModule } from './shared/modules/material/material.module';
@@ -30,7 +29,6 @@ export function tokenGetter()
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    NotFoundComponent,
     HomeComponent,
     DashboardComponent,
     FooterComponent,

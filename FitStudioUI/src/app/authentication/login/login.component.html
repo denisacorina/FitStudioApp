@@ -1,11 +1,9 @@
 <div class="split left" id="loginForm">
-    <a routerLink="/home"><mat-icon class="backIcon">keyboard_arrow_left</mat-icon></a>
+    <a routerLink="/home"><mat-icon class="backIcon" role="img">keyboard_arrow_left</mat-icon></a>
     <div class="centered">
 <form style="box-sizing: unset!important;" autocomplete="off">
   <img src="../../../assets/img/fitStudio.png" class="logoLogin"> 
 <h2 class="registerText">Login</h2>
-
-
 
 <div *ngIf="showError" class="alert alert-danger" role="alert">
     The email or password is incorrect
@@ -42,14 +40,9 @@
 
       <div class="text-center">
         <p style="font-size: 14px!important;">Don't have an account? <a routerLink="/register"><b>Register</b></a></p>
-      <h5>OR</h5>
+      
       </div>
-<div class="col s12 m6 offset-m3 center-align border">
 
-      <a href="#" role="button" class="googleBtn">
-        <img src="../../../assets/img/google.png" class="googleImg">Login in with Google
-      </a>
-</div>
 
   </form>
 </div>

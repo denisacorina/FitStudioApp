@@ -1,10 +1,49 @@
-<p>email {{display}}</p>
 
-<button (click)="logout()">Logout</button>
+<div class="nav">
+<h2>You're logged in as <b>{{display}}</b></h2>
 
-<ul *ngFor="let user of users">
+<button class="btn btn-light logout" (click)="logout()">Logout</button>
+</div>
 
-    <li> {{ user.email }}</li>
-    <li> {{ user.firstName }}</li>
-</ul>
+
+<br><br><h1>PROGRAM</h1><br><br>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td *ngFor="let c of mondayClass"><b>Trainer:</b> {{ c.name }} <br>
+                <b>Class:</b> {{ c.class.className }}<br>
+                <b>Activity:</b> {{ c.class.activity }}<br>
+                <b>Intensity:</b> {{ c.class.intensity }}<br>
+                <b>Start Time:</b> {{ c.class.startTime }} <br>
+                <b>End Time:</b> {{ c.class.endTime }}<br></td> </tr>
+                <tr>
+            <td *ngFor="let c of tuesdayClass"><b>Trainer:</b> {{ c.name }} <br>
+                    <b>Class:</b> {{ c.class.className }}<br>
+                    <b>Activity:</b> {{ c.class.activity }}<br>
+                    <b>Intensity:</b> {{ c.class.intensity }}<br>
+                    <b>Start Time:</b> {{ c.class.startTime }} <br>
+                    <b>End Time:</b> {{ c.class.endTime }}<br></td></tr>
+                    <tr>
+            <td *ngFor="let c of wednesdayClass"><b>Trainer:</b> {{ c.name }} <br>
+                    <b>Class:</b> {{ c.class.className }}<br>
+                    <b>Activity:</b> {{ c.class.activity }}<br>
+                    <b>Intensity:</b> {{ c.class.intensity }}<br>
+                    <b>Start Time:</b> {{ c.class.startTime }} <br>
+                    <b>End Time:</b> {{ c.class.endTime }}<br></td></tr>
+        <br>
+      </table>
+</div>
+
+
+
+
+
 

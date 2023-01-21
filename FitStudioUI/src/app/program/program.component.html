@@ -1,69 +1,45 @@
 <app-nav-bar></app-nav-bar>
 
+
 <div class="program-container">
+
+    <div class="section"> <h1 class="section-big-text">PROGRAM</h1>
+        <h1 class="section-title-text">PROGRAM</h1>
+    </div>
+
     <div class="size">
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <table class="table">
-    <thead class="thead-light">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
- </div>
-</div>
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td *ngFor="let c of mondayClass"><b>Trainer:</b> {{ c.name }} <br>
+                        <b>Class:</b> {{ c.class.className }}<br>
+                        <b>Activity:</b> {{ c.class.activity }}<br>
+                        <b>Intensity:</b> {{ c.class.intensity }}<br>
+                        <b>Start Time:</b> {{ c.class.startTime }} <br>
+                        <b>End Time:</b> {{ c.class.endTime }}<br></td> </tr>
+                        <tr>
+                    <td *ngFor="let c of tuesdayClass"><b>Trainer:</b> {{ c.name }} <br>
+                            <b>Class:</b> {{ c.class.className }}<br>
+                            <b>Activity:</b> {{ c.class.activity }}<br>
+                            <b>Intensity:</b> {{ c.class.intensity }}<br>
+                            <b>Start Time:</b> {{ c.class.startTime }} <br>
+                            <b>End Time:</b> {{ c.class.endTime }}<br></td></tr>
+                            <tr>
+                    <td *ngFor="let c of wednesdayClass"><b>Trainer:</b> {{ c.name }} <br>
+                            <b>Class:</b> {{ c.class.className }}<br>
+                            <b>Activity:</b> {{ c.class.activity }}<br>
+                            <b>Intensity:</b> {{ c.class.intensity }}<br>
+                            <b>Start Time:</b> {{ c.class.startTime }} <br>
+                            <b>End Time:</b> {{ c.class.endTime }}<br></td></tr>
+                <br>
+              </table>
+        </div>
 
 <app-footer></app-footer>
